@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>A.R. Rahman Concert Live</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+
+    body, html {
+      height: 100%;
+      font-family: 'Segoe UI', sans-serif;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      background: url("concert image.jpg") no-repeat center center/cover;
+      position: fixed;
+      width: 100%; height: 100%;
+      filter: blur(8px);
+      z-index: -1;
+      transform: scale(1.1);
+    }
+
+    section {
+      height: 100vh;
+      padding: 50px 20px;
+      background-color: rgba(9, 8, 8, 0.6);
+      color: rgb(215, 122, 122);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      scroll-snap-align: start;
+    }
+
+    h1, h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      animation: fadeIn 1.5s;
+    }
+
+    p, li {
+      font-size: 1.2rem;
+      animation: fadeIn 2s;
+    }
+
+    img, video, iframe, audio, table, form {
+      margin-top: 20px;
+      max-width: 90%;
+      border-radius: 10px;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    table, th, td {
+      border: 1px solid rgb(110, 205, 208);
+      border-collapse: collapse;
+      padding: 10px;
+    }
+
+    input, button {
+      padding: 10px;
+      margin: 5px 0;
+      border: none;
+      border-radius: 5px;
+    }
+
+    button {
+      background-color: #1fde62;
+      color: rgb(30, 152, 200);
+      cursor: pointer;
+    }
+
+    nav {
+      position: fixed;
+      top: 10px;
+      right: 20px;
+      z-index: 10;
+    }
+
+    nav a {
+      color: #548c9a;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: bold;
+      background-color: z-index(136, 62, 62, 0.5);
+      padding: 5px 10px;
+      border-radius: 5px;
+    }
+
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    html {
+      scroll-snap-type: y mandatory;
+    }
+  </style>
+</head>
+<body>
+  <marquee behavior="scroll" direction="left" scrollamount="10" style="background-color: #564c4c; color: #a80000; font-weight: bold; padding: 10px;">
+  🔥 Hurry up! Registration started! Book your tickets now!
+</marquee>
+
+
+  <nav>
+    <a href="#slide1">Home</a>
+    <a href="#slide2">Tracks</a>
+    <a href="#slide3">Tickets</a>
+    <a href="#slide4">Media</a>
+  </nav>
+
+
+
+  <!-- Slide 1: Home/About -->
+  <section id="slide1">
+    <h1>A.R. Rahman Concert 2025</h1>
+    <p><strong>Feel the music, live the moment.
+      Enjoy the magic of AR Rahman like never before!
+    </strong></p>
+    <img src="rahuman image.webp" alt="A.R. Rahman" width="300">
+    <p><i>Live at Chennai | July 12, 2025</i></p>
+  </section>
+
+  <!-- Slide 2: Tracks & Info -->
+  <section id="slide2">
+    <h2>Top Tracks & Schedule</h2>
+    <ul>
+      <li>🎵 Munbe Vaa</li>
+      <li>🎵 Thalli Pogathey</li>
+      <li>🎵 Vande Mataram</li>
+    </ul>
+    <table>
+      <tr><th>Date</th><th>City</th><th>Venue</th></tr>
+      <tr><td>July 12</td><td>Chennai</td><td>J.N. Stadium</td></tr>
+      <tr><td>Aug 3</td><td>Bangalore</td><td>Palace Grounds</td></tr>
+    </table>
+  </section>
+
+  <!-- Slide 3: Tickets -->
+  <section id="slide3">
+    <h2>Book Your Tickets</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <input type="number" placeholder="No. of Tickets" required>
+      <button type="submit">Book Now</button>
+    </form>
+    <p>Follow us on <a href="https://instagram.com/arrahman" target="_blank" style="color:#1db954;">Instagram</a></p>
+  </section>
+
+  <!-- Slide 4: Media -->
+<section id="slide4">
+  <h2>Listen & Watch </h2>
+  <audio controls>
+    <source src="Ponni-Nadhi.mp3" type="audio/mp3">
+  </audio><br><br>
+
+  <iframe width="500" height="300" src="https://www.youtube.com/embed/M7ebX_7ay6o" 
+    title="video player" frameborder="0" allowfullscreen></iframe>
+</section>
+
+<footer style="text-align: center; padding: 15px; background-color: rgba(0, 0, 0, 0.6); color: #ffb3b3; font-weight: bold;">
+  Done by Sharmila 💫
+</footer>
